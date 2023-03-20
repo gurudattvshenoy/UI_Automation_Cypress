@@ -10,13 +10,13 @@ describe('Test suite for working with Radio button and Checkboxes  ',()=>{
         cy.visit('https://itera-qa.azurewebsites.net/home/automation')
        
         //Check specific checkbox 
-        cy.get('input.form-check-input[type="checkbox"]')
+        cy.get('#tuesday')
           .should('be.visible')
           .check()
           .should('be.checked')
     
           // clean up
-        cy.get('input.form-check-input[type="checkbox"]')
+        cy.get('#tuesday')
           .uncheck()
           .should('not.be.checked')
     }),
@@ -52,7 +52,7 @@ describe('Test suite for working with Radio button and Checkboxes  ',()=>{
         .uncheck()
         .should('not.be.checked')
   }),
-  it.only('Test case for checking and unchecking Last Check box in the checkbox group',()=>{
+  it('Test case for checking and unchecking Last Check box in the checkbox group',()=>{
     
     cy.visit('https://itera-qa.azurewebsites.net/home/automation')
    //Check last checkbox
